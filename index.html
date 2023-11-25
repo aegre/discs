@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Álbumes y Artistas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 50px;
+      /* Ajusta el tamaño de la carátula según sea necesario */
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Lista de Álbumes y Artistas</h1>
+
+  <input type="text" id="searchInput" placeholder="Buscar por artista o álbum">
+
+  <ul id="albumList">
+    <li>AC/DC - Back In Black</li>
+    <li>Alabama Shakes - Boys & Girls</li>
+    <li>Alvvays - Alvvays</li>
+    <li>Alvvays - Antisocialites</li>
+    <li>Alvvays - Blue Rev</li>
+    <li>Amy Winehouse - Back to Black</li>
+    <li>Arcade Fire - Funeral</li>
+    <li>Arcade Fire - Neon Bible</li>
+    <li>Arcade Fire - The Suburbs</li>
+    <li>Arcade Fire - Reflektor</li>
+    <li>Arcade Fire - Everything Now</li>
+    <li>Arcade Fire - Creature Confort</li>
+    <li>Arcade Fire - We</li>
+    <li>Arcade Fire - We</li>
+    <li>Arcade Fire & Owen Pallett - Her</li>
+    <li>Arctic Monkeys - Whatever People Say I Am Thats What I Am Not</li>
+    <li>Arctic Monkeys - Favorite Worst Nightmare</li>
+    <li>Arctic Monkeys - Humbug</li>
+    <li>Arctic Monkeys - Suck It And see</li>
+    <li>Arctic Monkeys - AM</li>
+    <li>Arctic Monkeys - Tranquility Base & Casino</li>
+    <li>Beach Fossils - Beach Fossils</li>
+    <li>Beach Fossils - What A Pleasure</li>
+    <li>Beach Fossils - Clash The Truth</li>
+    <li>Beach Fossils - Somersault</li>
+    <li>Beach Fossils - The Other Side Of Lide: Piano Balads</li>
+    <li>Beach House - Bloom</li>
+    <li>Beach House - Depression Cherry</li>
+    <li>Beach House - Thank Your Lucky Stars</li>
+    <li>Beach House - 7</li>
+    <li>Beach House - Once Twice Melody</li>
+    <li>Beck - Colors</li>
+    <li>Bee Gees - Timeless: The All Time Greatest Hits</li>
+    <li>Beirut - Rip Tide</li>
+    <li>Billie Eilish - dont smile at me</li>
+    <li>Billie Eilish - When we All Fall Sleep</li>
+    <li>Billie Eilish - Happier Than Ever</li>
+    <li>Billy Joel - The Stranger</li>
+    <li>Black Pumas - Black Pumas</li>
+    <li>Black Sabbath - Paranoid</li>
+    <li>Blink 182 - Enema Of The State</li>
+    <li>Blink 182 - Take Off Your Pants And Jacket</li>
+    <li>Blink 182 - Greatest Hits</li>
+    <li>Bloc Party - Silent Alarm</li>
+    <li>Bloc Party - Four</li>
+    <li>Bratty - Delusión</li>
+    <li>Bruce Springsteen & The Street Band - Live In New York City</li>
+    <li>Café Tacvba - re</li>
+    <li>Cage the Elephant - Melophobia</li>
+    <li>Caifanes - Caifanes</li>
+    <li>Caifanes - Volumen II: El Diablito</li>
+    <li>Caifanes - El Silencio</li>
+    <li>Caifanes - El Nervio del Volcán</li>
+    <li>Caribou - Our Love</li>
+    <li>Caspian - Hymn for the Greatest Generation</li>
+    <li>Caspian - Dust and Disquiet</li>
+    <li>Cayucas - Bigfoot</li>
+    <li>Charles Bradley - No Time For Dreaming</li>
+    <li>Charles Bradley - Victim Of Love</li>
+    <li>Charles Bradley - Changes</li>
+    <li>Charles Bradley - Black Velvet</li>
+    <li>Chvrches - Love Is Dead</li>
+    <li>Cigarettes After Sex - I.</li>
+    <li>Cigarettes After Sex - Cigarettes After Sex</li>
+    <li>Cigarettes After Sex - Cry</li>
+    <li>Cloud Nothings - Turning On</li>
+    <li>Cloud Nothings - Attack on Memory</li>
+    <li>Cloud Nothings - Here & Nowehre else</li>
+    <li>Cloud Nothings - Life Without Sound</li>
+    <li>Cloud Nothings - Last Building Burning</li>
+    <li>Cloud Nothings - The Shadow I Remember</li>
+    <li>Clutch - Clutch</li>
+    <li>Coldplay - Parchutes</li>
+    <li>Coldplay - Rush of Blood to the Head</li>
+    <li>Coldplay - X&Y</li>
+    <li>Coldplay - Mylo Xyloto</li>
+    <li>Coldplay - Ghost Stores</li>
+    <li>Coldplay - Music Of The Spheres</li>
+    <li>Creedence Clearwater Revival - Chronicle: The 20 Greatest Hits</li>
+    <li>Creedence Clearwater Revival - Chronicle: The 20 Greatest Hits</li>
+    <li>Crumb - Locket</li>
+    <li>Crumb - Jynx</li>
+    <li>Crumb - Ice Melt</li>
+    <li>Cults - Static</li>
+    <li>Daft Punk - Random Accesss Memories</li>
+    <li>David Bowie - The Man Who Sold The World</li>
+    <li>David Bowie - The Rise And Fall Of Ziggy Stardust And The Spiders From Mars Remaster</li>
+    <li>David Bowie - The Rise and Fall of Ziggy Stardust and the Spiders from Mars</li>
+    <li>Death Cab For Cutie - Narrow Stairs</li>
+    <li>Death Cab For Cutie - Codes And Keys</li>
+    <li>Death Cab For Cutie - Kintsugi</li>
+    <li>Deftones - Diamond Eyes</li>
+    <li>Depeche Mode - Black Celebration</li>
+    <li>DIIV - Oshin</li>
+    <li>DIIV - Is the Is Are</li>
+    <li>DIIV - Deceiver</li>
+    <li>Dua Lipa - Future Nostalgia</li>
+    <li>Editors - And End Has a Start</li>
+    <li>Editors - Violence</li>
+    <li>El Columpio Asesino - Diamantes</li>
+    <li>El Mató a Un Policía Motorizado - La Dinastía Escorpio</li>
+    <li>El Mató a Un Policía Motorizado - La Sintesis O'Konor</li>
+    <li>Evanescence - Fallen</li>
+    <li>Explosions in the Sky - Earth is Not a Cold Dead Place</li>
+    <li>Explosions in the Sky - All of a Sudden I Miss Everyone</li>
+    <li>Fleetwood Mac - Rumours</li>
+    <li>Fleetwood Mac - Tusk</li>
+    <li>Fleetwood Mac - Greatest Hits</li>
+    <li>Foals - Antidotes</li>
+    <li>Foals - Total Life Forever</li>
+    <li>Foals - Holy Fire</li>
+    <li>Foals - What Went Down</li>
+    <li>Foals - Everything Not Saved Will Be Lost - Part 1</li>
+    <li>Foals - Everything Not Saved Will Be Lost Part 2</li>
+    <li>Foals - Life Is Yours</li>
+    <li>Foo Fighters - Foo Fighters</li>
+    <li>Foo Fighters - There Is Nothing Left To Lose</li>
+    <li>Foo Fighters - Skin & Bones</li>
+    <li>Foo Fighters - Greates hits</li>
+    <li>Foo Fighters - Wasting Light</li>
+    <li>Foo Fighters - Sonic Highways</li>
+    <li>Foo Fighters - Medicine At Midnight</li>
+    <li>Foster the People - Torches</li>
+    <li>Franz Ferdinand - Franz Ferdinand</li>
+    <li>Future Islands - Singles</li>
+    <li>Future Islands - As Long As You Are</li>
+    <li>Garbage - Version 2.0</li>
+    <li>Garbage - Beautiful Garbage</li>
+    <li>Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas to Heaven</li>
+    <li>Gorillaz - Gorillaz</li>
+    <li>Gorillaz - G-Sides</li>
+    <li>Gorillaz - Plastic Beach</li>
+    <li>Gorillaz - The Now Now</li>
+    <li>Gorillaz - Song Machine, Season 1</li>
+    <li>Gorillaz - Cracker Island</li>
+    <li>Green Day - Dookie</li>
+    <li>Green Day - American Idiot</li>
+    <li>Greta Van Fleet - From The Fires</li>
+    <li>Guns And Roses - Appetite for Destruction</li>
+    <li>Guns And Roses - Use Your Ilussion I</li>
+    <li>Guns And Roses - Greatest Hits</li>
+    <li>Guns N'Roses - Use Your Illusion 2</li>
+    <li>Harry Styles - Fine Line</li>
+    <li>Harry Styles - Harry's House</li>
+    <li>Heroes Del Silencio - Senda 91</li>
+    <li>Heroes Del Silencio - Avalancha</li>
+    <li>Imagine Dragons - Night Visions</li>
+    <li>Interpol - Turn on the birght lights</li>
+    <li>Interpol - Antics 20 Aniversario</li>
+    <li>Interpol - Antics</li>
+    <li>Interpol - Our Love to Admire</li>
+    <li>Interpol - Interpol</li>
+    <li>Interpol - El Pintor</li>
+    <li>Interpol - Marauder</li>
+    <li>Interpol - The Other Side Of Make-Believe</li>
+    <li>Iron Maiden - The Number of the Beast</li>
+    <li>Iron Maiden - Nights of the Dead</li>
+    <li>Jack White - Lazaretto</li>
+    <li>Japandroids - Near to the Wild Heart of Life</li>
+    <li>John Lennon - Imagine</li>
+    <li>Jónsi - Go</li>
+    <li>Jose Jose - Personalidad 15 Éxitos</li>
+    <li>Joy Division - Unknown Pleasures</li>
+    <li>Joy Division - Closer</li>
+    <li>Joy Dvision - Substance</li>
+    <li>Kaiser Chiefs - Education, Education, Education & War</li>
+    <li>Keane - Hopes And Fears</li>
+    <li>Keane - Under The Iron Sea</li>
+    <li>Keane - Night Train</li>
+    <li>Keane - Strangeland</li>
+    <li>Keane - The Best Of Keane</li>
+    <li>King Crimson - In The Court Of The Crimson King</li>
+    <li>King Gizzard & The lizard Wizard - Nonagon Infinity</li>
+    <li>Kings of Leon - Only By The Night</li>
+    <li>Kings Of Leon - Come Around Sundown</li>
+    <li>Kings Of Leon - When You See Yourself</li>
+    <li>Kinky - Kinky</li>
+    <li>Kiss - KissWorld: The Best Of Kiss</li>
+    <li>LCD Soundsystem - LCD Soundsystem</li>
+    <li>Led Zeppelin - Led Zeppelin II</li>
+    <li>Led Zeppelin - Led Zeppelin IV</li>
+    <li>Leonard Cohen - You Want It Darker</li>
+    <li>Linkin Park - Hybrid Theory</li>
+    <li>Linkin Park - Minutes to Midnight</li>
+    <li>Lorde - Pure Heroine</li>
+    <li>Los Panchos - Pesonalidad 15 Éxitos</li>
+    <li>Lost Acapulco - Acapulco Golden</li>
+    <li>Low Roar - Low Roar</li>
+    <li>Low Roar - 0</li>
+    <li>Low Roar - Once In a Long Long While</li>
+    <li>Low Roar - Ross</li>
+    <li>Low Roar - Maybe Tomorrow</li>
+    <li>M83 - Hurry Up, We're Dreaming</li>
+    <li>Mastodon - Medium Rarities</li>
+    <li>Metallica - Kill Em All</li>
+    <li>Metallica - Ride The Lightning</li>
+    <li>Metallica - ...And Justice For All</li>
+    <li>Metallica - Metallica</li>
+    <li>Metronomy - Pip Paine (Pay The #5000 You Owe)</li>
+    <li>Metronomy - Nights Out</li>
+    <li>Metronomy - English Riviera</li>
+    <li>Metronomy - Small World</li>
+    <li>Mew - Frengers</li>
+    <li>MGMT - Oracular Specular</li>
+    <li>Michael Jackson - Thriller</li>
+    <li>Miles Davis - Kind of Blue</li>
+    <li>Miley Cyrus - Endless Summer Vacation</li>
+    <li>Mint Field - Levitation Sessions</li>
+    <li>Moby - All Visible Objects</li>
+    <li>Modest Mouse - Good News for People who Love Bad News</li>
+    <li>Modest Mouse - We Were Dead Before the Ship Even Sank</li>
+    <li>Mogwai - Happy Songs for Happy People</li>
+    <li>Mogwai - Les Revenants</li>
+    <li>Mogwai - Hardcore Will Never Die But You Will</li>
+    <li>Mogwai - Hawk Is Howling</li>
+    <li>Mogwai - Rave Tapes</li>
+    <li>Mogwai - Atomic</li>
+    <li>Mogwai - Every Country's Sun</li>
+    <li>Molotov - ¿Dónde Jugarán Las Niñas?l</li>
+    <li>Motorhead - Aces Of Spades</li>
+    <li>Moving Mountains - Moving Mountains</li>
+    <li>Muse - Showbiz</li>
+    <li>Muse - Origin of Symmetry XX Aniversary Remix</li>
+    <li>Muse - Origin of Symmetry</li>
+    <li>Muse - Absolution</li>
+    <li>Muse - Black Holes & Revelations</li>
+    <li>Muse - The Resistance</li>
+    <li>Muse - The 2nd Law</li>
+    <li>Muse - Will Of The People</li>
+    <li>My Bloody Valentine - M B V</li>
+    <li>My Chemical Romance - Three Cheers for Sweet Revenge</li>
+    <li>My Chemical Romance - Black Parade</li>
+    <li>Nada Surf - The Proximity Effect</li>
+    <li>Nada Surf - Let Go</li>
+    <li>Nada Surf - The Weight Is A Gift</li>
+    <li>Nada Surf - Lucky</li>
+    <li>Nada Surf - The Stars Are Indifferent To Astronomy</li>
+    <li>Nada Surf - You Know Who You Are</li>
+    <li>Nada Surf - Peaceful Ghosts</li>
+    <li>Neil Diamond - Love At The Greek</li>
+    <li>Nine Black Alps - Candy for the Clowns</li>
+    <li>Nirvana - Nevermind</li>
+    <li>Nirvana - Unplugged Live in Ny</li>
+    <li>Nirvana - Nirvana</li>
+    <li>Oasis - Definitely Maybe</li>
+    <li>Oasis - (What's The Story) Morning Glory?</li>
+    <li>Odesza - Moment Apart</li>
+    <li>Oliver Sim - Hideous Bastard</li>
+    <li>OMD - Souvenir</li>
+    <li>Panteón Rococó - Panteón Rococó</li>
+    <li>Panteón Rococó - Compañeros Musicales</li>
+    <li>Paramore - Riot!</li>
+    <li>Paramore - Brand New Eyes</li>
+    <li>Pearl Jam - Ten</li>
+    <li>Pg.lost - In Never Out</li>
+    <li>Pg.lost - Key</li>
+    <li>Phoenix - Wolfwang Amadeus</li>
+    <li>Pink Floyd - The Dark Side Of The Moon</li>
+    <li>Pink Floyd - Wish You Were Here</li>
+    <li>Pixies - Surfer Rosa</li>
+    <li>Pixies - Doolittle</li>
+    <li>Pixies - Live From Coachella</li>
+    <li>PJ Harvey - Let England Shake</li>
+    <li>Placebo - Sleeping With Ghosts</li>
+    <li>Placebo - Meds</li>
+    <li>Porter Robinson - Worlds</li>
+    <li>Porter Robinson - Nurture</li>
+    <li>Portishead - Dummy</li>
+    <li>Portishead - Portishead</li>
+    <li>Portishead - Roseland NYC Live</li>
+    <li>Queen - A Night At The Opera</li>
+    <li>Queen - Greatest Hits I</li>
+    <li>Queen Of The Stone Age - Songs For The Deaf</li>
+    <li>Queen Of The Stone Age - Era Vulgaris</li>
+    <li>Queens of the Stone Age - ...Like Clockwork</li>
+    <li>Radiohead - The Bends</li>
+    <li>Radiohead - Kid A.</li>
+    <li>Radiohead - Amnesiac</li>
+    <li>Radiohead - Hail To The Thief</li>
+    <li>Radiohead - The King Of Limbs</li>
+    <li>Radiohead - Kid A Mnesia</li>
+    <li>Rage Against The Machine - Rage Against The Machine</li>
+    <li>Rage Against The Machine - The Battle of Mexico City</li>
+    <li>Rage Against The Machine - The Battle of Los Angeles</li>
+    <li>Rammstein - Herzeleid</li>
+    <li>Red Hot Chili Peppers - Blood Sugar Sex Magik</li>
+    <li>Red Hot Chilli Peppers - Californication</li>
+    <li>Red Hot Chilli Peppers - By the Way</li>
+    <li>Rise Against - The Unraveling</li>
+    <li>Rise Against - Revolutions Per Minute</li>
+    <li>Rise Against - Siren Song of the Counter Culture</li>
+    <li>Rise Against - The Sufferer & The Witness</li>
+    <li>Rise Against - Appeal To Reason</li>
+    <li>Rise Against - Endgame</li>
+    <li>Rise Against - The Black Market</li>
+    <li>Rise Against - Wolves</li>
+    <li>Rise Against - The Ghost Note Symphonies Vol. 1</li>
+    <li>Roger Waters - The Wall Live In Berlin</li>
+    <li>Rolling Stones - Get Your Ya Ya's Out</li>
+    <li>Sex Pistols - Nevermind The Bollocks</li>
+    <li>Sex Pistols - Floggin a Dead Horse</li>
+    <li>Sia - Chandelier</li>
+    <li>Sigur Ros - Agetis Byrjun</li>
+    <li>Sigur Ros - Agetis Byrjun</li>
+    <li>Sigur Ros - ()</li>
+    <li>Sigur Ros - Takk...</li>
+    <li>Sigur Ros - Valtari</li>
+    <li>Sigur Ros - Kveikur</li>
+    <li>Sigur Ros - Odin's Raven Magic</li>
+    <li>Sigur Ros - Átta</li>
+    <li>Slowdive - Holding Our Breath</li>
+    <li>Slowdive - Souvlaki</li>
+    <li>Slowdive - Slowdive</li>
+    <li>Slowdive - Everything is Alive</li>
+    <li>Soda Stereo - Nada Personal</li>
+    <li>Soda Stereo - Signos</li>
+    <li>Soda Stereo - Ruido Blanco</li>
+    <li>Soda Stereo - Sueño Stereo</li>
+    <li>Soda Stereo - MTV Unplugged/Comfort y Música Para Volar</li>
+    <li>Stars - La Vieja Guardia (Best of Stars)</li>
+    <li>Stereophonics - Word Gets Around</li>
+    <li>Stereophonics - Performance And Cocktails</li>
+    <li>Stereophonics - Language. Sex. Violence. Other?</li>
+    <li>Stereophonics - Live From Dakota</li>
+    <li>Stereophonics - Scream Above The Sounds</li>
+    <li>System Of A Down - Toxicity</li>
+    <li>System Of A Down - Mezmerize</li>
+    <li>System Of A Down - Hypnotize</li>
+    <li>Tame Impala - Currents</li>
+    <li>Tame Impala - Slow Rush</li>
+    <li>The Antlers - Burst Apart</li>
+    <li>The Beatles - Sgt. Pepper's Lonely Heart</li>
+    <li>The Beatles - Yellow Submarine</li>
+    <li>The Beatles - Let It Be</li>
+    <li>The Black Keys - El Camino</li>
+    <li>The Chemical Brothers - Further</li>
+    <li>The Clash - The Clash</li>
+    <li>The Clash - London Calling</li>
+    <li>The Cure - Seventeen Seconds</li>
+    <li>The Cure - Greatest Hits</li>
+    <li>The Doors - The Doors</li>
+    <li>The Drums - The Drums</li>
+    <li>The Drums - Portomento</li>
+    <li>The Hives - Live At Third Man records</li>
+    <li>The Horrors - V</li>
+    <li>The Killers - Sam's Town</li>
+    <li>The Killers - Direct Hits</li>
+    <li>The National - Alligator</li>
+    <li>The National - Boxer</li>
+    <li>The National - Hight Violet</li>
+    <li>The National - Trobule Will Find Me</li>
+    <li>The National - Sleep Well Beast</li>
+    <li>The National - I Am Easy To Find</li>
+    <li>The National - First Two Pages Of Frankenstein</li>
+    <li>The Offspring - Greatest Hits</li>
+    <li>The Police - Reggatta De Blanc</li>
+    <li>The Police - Zenyattà Mondatta</li>
+    <li>The Police - Ghost In The Machine</li>
+    <li>The Police - Synchronicity</li>
+    <li>The Police - Every Breath You Take: The Singles</li>
+    <li>The Postal Service - Give Up</li>
+    <li>The Ramones - Ramones</li>
+    <li>The Stone Roses - The Stone Roses</li>
+    <li>The Strokes - Is This It</li>
+    <li>The Strokes - Room On Fire</li>
+    <li>The Strokes - First Impressions of Earth</li>
+    <li>The Strokes - Angles</li>
+    <li>The Strokes - The New Abnormal</li>
+    <li>The War On Drugs - Lost in the Dream</li>
+    <li>The War on Drugs - A Deeper Understanding</li>
+    <li>The War on Drugs - Live Drugs</li>
+    <li>The War On Drugs - I Don't Live Here Anymore</li>
+    <li>The Weeknd - After Hours</li>
+    <li>The Weeknd - The Highlights</li>
+    <li>The XX - XX</li>
+    <li>The XX - Coexist</li>
+    <li>The XX - I See You</li>
+    <li>This will destroy you - Young Mountain</li>
+    <li>This will destroy you - This will destroy you</li>
+    <li>This will destroy you - Tunnel Blanket</li>
+    <li>This will destroy you - Live in Iceland</li>
+    <li>This will destroy you - Another Language</li>
+    <li>Tool - Opiate</li>
+    <li>Toro Y Moi - Underneath the Pine</li>
+    <li>Toto - Toto IV</li>
+    <li>Toto - Greatest Hits - 40 Trips Around The Sun</li>
+    <li>Two Door Cinema Club - Tourist History</li>
+    <li>Two Door Cinema Club - Gameshow</li>
+    <li>U2 - The Joshua Tree</li>
+    <li>U2 - U218 Singles</li>
+    <li>Vampire Weekend - Vampire Weekend</li>
+    <li>Vampire Weekend - Contra</li>
+    <li>Various Artists - Celebrating 25 Years of Pokemon</li>
+    <li>Various Artists - The Super Mario Bros Movie Original Movie Picture Soundtrack</li>
+    <li>Weezer - Blue Album</li>
+    <li>Weezer - Green Album</li>
+    <li>Weezer - Pinkerton</li>
+    <li>Weezer - Black Album</li>
+    <li>Weezer - Van Weezer</li>
+    <li>White Lies - To Lose My Life...</li>
+    <li>White Lies - Friends</li>
+    <li>White Lies - Five</li>
+    <li>White Lies - As I Try Not to Fall Apart</li>
+    <li>Wild Nothing - Gemini</li>
+    <li>Wild Nothing - Nocturne</li>
+    <li>Wild Nothing - Indigo</li>
+    <li>Wolfmother - Wolfmother</li>
+    <li>Yeah Yeah Yeahs - Cool It Down</li>
+    <li>Zoé - Memo Rex Commander y el Corazón Atómico de la Vía Láctea</li>
+    <li>Zoé - MTV Unplugged/Música de Fondo</li>
+  </ul>
+
+  <script>
+    function normalizeText(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = normalizeText(input.value.toUpperCase());
+      ul = document.getElementById('albumList');
+      li = ul.getElementsByTagName('li');
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i];
+        txtValue = normalizeText(a.textContent || a.innerText);
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
